@@ -1,0 +1,38 @@
+<%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"%>
+
+<div id="header">
+	<hr>
+	<c:if test="${user eq null}">
+		<h1><fmt:message key="login_jsp.label.welcome"></fmt:message></h1>
+	</c:if>
+	<c:if test="${user ne null}">
+		<h1>
+			<c:out value="${user.fullName}" />
+		</h1>
+	</c:if>
+
+
+</div>
+
+<div id="nav">
+
+	<ul>
+		<li><a href="http://localhost:8080/SummaryTask4/settings.jsp"><fmt:message key="index_jsp.link.settings"></fmt:message></a></li>
+		<c:if test="${user ne null}">
+
+			<li><a
+				href="http://localhost:8080/SummaryTask4/personal_cabinet.jsp"><fmt:message key="index_jsp.link.back"></fmt:message></a>
+
+			</li>
+
+		</c:if>
+		<c:if test="${user ne null}">
+
+			<li><a
+				href="http://localhost:8080/SummaryTask4/controller?command=logout"><fmt:message key="index_jsp.link.logout"></fmt:message></a>
+
+			</li>
+		</c:if>
+	</ul>
+
+</div>

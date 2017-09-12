@@ -1,0 +1,15 @@
+<%@ include file="/WEB-INF/jspf/page.jspf"%>
+<%@ include file="/WEB-INF/jspf/tags.jspf"%>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>${title}</title>
+
+<link rel="stylesheet" type="text/css" media="screen"
+	href="style/SummaryTask4.css" />
+
+<c:if test="${pageNumber ne '1'}">
+<meta http-equiv="refresh" content="1800;URL=http://localhost:8080/SummaryTask4/login.jsp"/> 
+<%@ taglib uri="/WEB-INF/x.tld" prefix="x"%>
+</c:if>
+</head>
